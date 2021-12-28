@@ -2,3 +2,82 @@
     padding: 0;
     margin: 0;
 }
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+#secao-1 {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#secao-2 {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#corpo {
+    background: #DFDFDF;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 5px;
+    height: 70vh;
+    width: 70vw;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #DFDFDF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+    gap: 10vh 0vw;
+}
+
+.corpo-1 {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 0vh 4vw;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    height: 4vh;   
+}
+
+select {
+    height: 4vh;
+}
+
+/* TABLET */
+@media(max-width: 1023px) and (min-width: 768px) {
+
+    #corpo {
+        width: 80vw;
+    }
+
+}
+
+/* MOBILE */
+@media(max-width: 767px) {
+
+    #corpo {
+        width: 90vw;
+    }
+}
