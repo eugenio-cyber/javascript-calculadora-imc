@@ -1,32 +1,45 @@
+const button = document.getElementById("btn");
+
 function calc() {
 
     const nome = document.getElementById("nome").value;
     const peso = document.getElementById("peso").value;
     const altura = document.getElementById("altura").value;
+    const modal = document.getElementById("modal-erro");
     var select = document.getElementById("sexo");
     var value = select.options[select.selectedIndex].value;
 
-    const IMC = (peso / (altura * altura)).toFixed(1);
+    if(nome !== "" && peso !== "" && altura !== "" && value) {
 
-    if(IMC < 18.5) {
+        const IMC = (peso / (altura * altura)).toFixed(1);
 
-        alert("MAGREZA")
+        if(IMC < 18.5) {
 
-    } else if(IMC >= 18.5 && IMC <= 24.9) {
+            alert("MAGREZA")
 
-        alert("NORMAL")
+        } else if(IMC >= 18.5 && IMC <= 24.9) {
 
-    } else if(IMC >= 25.0 && IMC <= 29.9) {
+            alert("NORMAL")
 
-        alert("SOBREPESO")
+        } else if(IMC >= 25.0 && IMC <= 29.9) {
 
-    } else if(IMC >= 30.0 && IMC <= 39.9) {
+            alert("SOBREPESO")
 
-        alert("OBESIDADE")
+        } else if(IMC >= 30.0 && IMC <= 39.9) {
 
-    } else if(IMC > 40.0) {
+            alert("OBESIDADE")
 
-        alert("OBESIDADE GRAVE")
+        } else if(IMC > 40.0) {
+
+            alert("OBESIDADE GRAVE")
+
+        }
+
+    } else {
+        
+        modal.classList.add("mostrar");
 
     }
 }
+
+button.addEventListener("click", calc);

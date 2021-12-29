@@ -37,6 +37,12 @@ h2 {
     color: #DFDFDF;
 }
 
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #13393A;
+    font-weight: 400;
+}
+
 label {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
@@ -91,6 +97,74 @@ select {
     color: #13393A;
 }
 
+#modal {
+    background: #DFDFDF;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 30vh;
+    padding: 4%;
+    gap: 6%;
+    position: relative;
+}
+
+#modal h2{
+    color: #13393A;
+}
+
+#modal p{
+    text-align: center;
+}
+
+.modal-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2000;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.fechar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 4vw;
+    height: 6vh;
+    cursor: pointer;
+    background: #FF0000;
+    color: #DFDFDF;
+    border: none;
+    border-radius: 28px;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px , 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0 , 0);
+    }
+}
+
+.mostrar .modal-container {
+    animation: modal 0.3s;
+}
+
 /* TABLET */
 @media(max-width: 1023px) and (min-width: 768px) {
 
@@ -108,6 +182,14 @@ select {
 
     #btn {
         width: 24vw;
+    }
+
+    #modal-erro {
+        width: 40vw;
+    }
+
+    .fechar {
+        width: 6vw;
     }
 }
 
@@ -128,5 +210,13 @@ select {
 
     #btn {
         width: 30vw;
+    }
+
+    #modal-erro {
+        width: 56vw;
+    }
+
+    .fechar {
+        width: 8vw;
     }
 }
