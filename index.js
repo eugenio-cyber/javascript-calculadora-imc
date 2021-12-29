@@ -6,6 +6,7 @@ function calc() {
     const peso = document.getElementById("peso").value;
     const altura = document.getElementById("altura").value;
     const moderro = document.getElementById("modal-erro");
+    const moderro2 = document.getElementById("modal-erro-2");
     const modresult = document.getElementById("modal-resultado");
     var select = document.getElementById("sexo");
     var value = select.options[select.selectedIndex].value;
@@ -18,7 +19,7 @@ function calc() {
 
             if(modresult) {
 
-                const nome2 = document.getElementById("nome2");
+                
                 const resultado = document.getElementById("resultado");
                 resultado.innerHTML = "Magreza";
 
@@ -40,7 +41,7 @@ function calc() {
 
             if(modresult) {
 
-                const nome2 = document.getElementById("nome2");
+                
                 const resultado = document.getElementById("resultado");
                 resultado.innerHTML = "Normal";
 
@@ -62,7 +63,7 @@ function calc() {
 
             if(modresult) {
 
-                const nome2 = document.getElementById("nome2");
+                
                 const resultado = document.getElementById("resultado");
                 resultado.innerHTML = "Sobrepeso";
 
@@ -84,7 +85,7 @@ function calc() {
 
             if(modresult) {
 
-                const nome2 = document.getElementById("nome2");
+                
                 const resultado = document.getElementById("resultado");
                 resultado.innerHTML = "Obesidade";
 
@@ -106,7 +107,6 @@ function calc() {
 
             if(modresult) {
 
-                const nome2 = document.getElementById("nome2");
                 const resultado = document.getElementById("resultado");
                 resultado.innerHTML = "Obesidade Grave";
 
@@ -124,14 +124,27 @@ function calc() {
 
             }
 
+        } else if (IMC == "NaN") {
+            
+            if(moderro2) {
+    
+                moderro2.classList.add("mostrar");
+                moderro2.addEventListener("click", (e) => {
+    
+                    if(e.target.id == "modal-erro" || e.target.classList == "fechar") {
+    
+                        moderro2.classList.remove("mostrar");
+    
+                    }
+                    
+                })
+            }
+
         }
 
     } else {
         
         if(moderro) {
-
-            const nn = document.getElementById("nome2");
-            nn.innerHTML = nome;
 
             moderro.classList.add("mostrar");
             moderro.addEventListener("click", (e) => {
