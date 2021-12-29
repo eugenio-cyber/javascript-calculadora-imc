@@ -90,6 +90,9 @@ select {
     width: 20vw;
     height: 6vh;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #btn:active {
