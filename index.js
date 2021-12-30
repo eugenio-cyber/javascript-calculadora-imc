@@ -103,7 +103,7 @@ function calc() {
 
             }
 
-        } else if(IMC > 40.0) {
+        } else if(IMC >= 40.0) {
 
             if(modresult) {
 
@@ -126,6 +126,22 @@ function calc() {
 
         } else if (IMC == "NaN") {
             
+            if(moderro2) {
+    
+                moderro2.classList.add("mostrar");
+                moderro2.addEventListener("click", (e) => {
+    
+                    if(e.target.id == "modal-erro" || e.target.classList == "fechar") {
+    
+                        moderro2.classList.remove("mostrar");
+    
+                    }
+                    
+                })
+            }
+
+        } else {
+
             if(moderro2) {
     
                 moderro2.classList.add("mostrar");
