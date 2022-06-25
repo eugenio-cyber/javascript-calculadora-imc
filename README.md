@@ -10,7 +10,7 @@
 
 ## 🔗 Quer acessar o projeto?
 
-[Não há link para este projeto]()
+[Clique aqui para ver este projeto](https://calculadora-imc-omega.vercel.app/)
 
 ## 🏹 Qual o objetivo do projeto?
 
@@ -18,7 +18,7 @@ O objetivo desse projeto foi construir uma rápido página onde utilizo HTML, CS
 
 ## 💻 Como usar?
 
-...
+Basta digitar as informações que são pedidas pela página.
 
 ## 🛠️ Ferramentas utilizadas?
 
